@@ -1,0 +1,12 @@
+--- ./src/mainboard/lenovo/t430/devicetree.cb	2020-01-15 17:42:17.441317488 +0000
++++ ./src/mainboard/lenovo/t430/devicetree.cb	2020-01-15 17:37:39.889846000 +0000
+@@ -165,6 +165,9 @@
+ 
+ 					register "has_thinker1" = "0"
+ 				end
++				chip drivers/pc80/tpm
++					device pnp 0c31.0 on end
++				end
+ 			end
+ 			device pci 1f.2 on # SATA Controller 1
+ 				subsystemid 0x17aa 0x21f3
